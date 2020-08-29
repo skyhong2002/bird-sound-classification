@@ -39,17 +39,13 @@ for x, y in ds:
 tsne = manifold.TSNE(n_components=2, init='pca', random_state=501)
 x_tsne = tsne.fit_transform(embeddings)
 keys = list(env.classes.keys())
-data = [[] for _ in keys]
 for i, (px, py) in enumerate(x_tsne):
-    data[labels[i]].append((px, py))
-
-for i, l in enumerate(data):
     try:
-        plt.scatter([(x, _) for (x, _) in l], [(y, _) for (_, y) in l], label=keys[i])
+        plt.scatter(px, py, label=keys[labels[i]])
     except Exception as e:
         print(e)
 
 print(f"{cnt} items.")
-plt.legend(bbox_to_anchor=(1.05, 1.0), loc='upper left')
+plt.legend()
 plt.savefig("t_sne.png")
 plt.show()

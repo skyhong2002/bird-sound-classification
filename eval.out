@@ -1,0 +1,471 @@
+Message from TWCC HPC admin
+-----------------------
+loading miniconda3 with conda 4.8.3/python 3.7
+docs : https://hackmd.io/@kmo/twcc_hpc_conda
+-----------------------
+
+2020-08-10 00:52:51.480958: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2020-08-10 00:52:51.603807: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1561] Found device 0 with properties: 
+pciBusID: 0000:1b:00.0 name: Tesla V100-SXM2-32GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 31.72GiB deviceMemoryBandwidth: 836.37GiB/s
+2020-08-10 00:52:51.638409: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-08-10 00:52:51.770840: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-08-10 00:52:51.775797: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2020-08-10 00:52:51.828949: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2020-08-10 00:52:51.832819: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2020-08-10 00:52:51.834924: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2020-08-10 00:52:51.888979: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-08-10 00:52:51.894773: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1703] Adding visible gpu devices: 0
+2020-08-10 00:52:51.895253: I tensorflow/core/platform/cpu_feature_guard.cc:143] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 AVX512F FMA
+2020-08-10 00:52:51.901485: I tensorflow/core/platform/profile_utils/cpu_utils.cc:102] CPU Frequency: 3000000000 Hz
+2020-08-10 00:52:51.901703: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x559446f4b9b0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-08-10 00:52:51.901736: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-08-10 00:52:52.058486: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x559446fc5ea0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2020-08-10 00:52:52.058552: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-SXM2-32GB, Compute Capability 7.0
+2020-08-10 00:52:52.061317: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1561] Found device 0 with properties: 
+pciBusID: 0000:1b:00.0 name: Tesla V100-SXM2-32GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 31.72GiB deviceMemoryBandwidth: 836.37GiB/s
+2020-08-10 00:52:52.061374: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-08-10 00:52:52.061394: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-08-10 00:52:52.061411: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2020-08-10 00:52:52.061427: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2020-08-10 00:52:52.061443: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2020-08-10 00:52:52.061460: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2020-08-10 00:52:52.061477: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-08-10 00:52:52.073708: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1703] Adding visible gpu devices: 0
+2020-08-10 00:52:52.073767: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-08-10 00:52:52.076249: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1102] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-08-10 00:52:52.076271: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1108]      0 
+2020-08-10 00:52:52.076285: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1121] 0:   N 
+2020-08-10 00:52:52.080388: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1247] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 30234 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-32GB, pci bus id: 0000:1b:00.0, compute capability: 7.0)
+2020-08-10 00:53:05.084091: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:184] Filling up shuffle buffer (this may take a while): 1727 of 9665
+2020-08-10 00:53:15.085537: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:184] Filling up shuffle buffer (this may take a while): 3402 of 9665
+2020-08-10 00:53:25.183043: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:184] Filling up shuffle buffer (this may take a while): 4994 of 9665
+2020-08-10 00:53:35.089133: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:184] Filling up shuffle buffer (this may take a while): 6560 of 9665
+2020-08-10 00:53:45.240224: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:184] Filling up shuffle buffer (this may take a while): 8087 of 9665
+2020-08-10 00:53:55.103223: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:184] Filling up shuffle buffer (this may take a while): 9600 of 9665
+2020-08-10 00:53:55.489850: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:233] Shuffle buffer filled.
+2020-08-10 00:53:58.038307: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+Accuracy: 75.00000%
+Accuracy: 72.91667%
+Accuracy: 73.61111%
+Accuracy: 72.91667%
+Accuracy: 71.66667%
+Accuracy: 70.83333%
+Accuracy: 69.04762%
+Accuracy: 69.27083%
+Accuracy: 69.44444%
+Accuracy: 70.00000%
+Accuracy: 71.21212%
+Accuracy: 71.87500%
+Accuracy: 71.15385%
+Accuracy: 69.94048%
+Accuracy: 70.00000%
+Accuracy: 70.31250%
+Accuracy: 70.83333%
+Accuracy: 71.29630%
+Accuracy: 71.71053%
+Accuracy: 71.25000%
+Accuracy: 71.03175%
+Accuracy: 70.64394%
+Accuracy: 70.47101%
+Accuracy: 70.83333%
+Accuracy: 71.33333%
+Accuracy: 71.47436%
+Accuracy: 71.45062%
+Accuracy: 71.42857%
+Accuracy: 70.97701%
+Accuracy: 71.11111%
+Accuracy: 71.50538%
+Accuracy: 71.48438%
+Accuracy: 72.09596%
+Accuracy: 72.05882%
+Accuracy: 71.78571%
+Accuracy: 71.99074%
+Accuracy: 72.07207%
+Accuracy: 71.92982%
+Accuracy: 72.00855%
+Accuracy: 71.87500%
+Accuracy: 71.44309%
+Accuracy: 71.72619%
+Accuracy: 71.60853%
+Accuracy: 71.68561%
+Accuracy: 71.20370%
+Accuracy: 71.28623%
+Accuracy: 71.27660%
+Accuracy: 71.52778%
+Accuracy: 71.51361%
+Accuracy: 71.33333%
+Accuracy: 71.24183%
+Accuracy: 71.31410%
+Accuracy: 71.38365%
+Accuracy: 71.45062%
+Accuracy: 71.59091%
+Accuracy: 71.50298%
+Accuracy: 71.49123%
+Accuracy: 71.55172%
+Accuracy: 71.25706%
+Accuracy: 71.18056%
+Accuracy: 71.17486%
+Accuracy: 71.37097%
+Accuracy: 71.29630%
+Accuracy: 71.22396%
+Accuracy: 71.08974%
+Accuracy: 71.14899%
+Accuracy: 71.26866%
+Accuracy: 71.32353%
+Accuracy: 71.19565%
+Accuracy: 71.13095%
+Accuracy: 71.00939%
+Accuracy: 70.71759%
+Accuracy: 70.89041%
+Accuracy: 71.00225%
+Accuracy: 71.05556%
+Accuracy: 71.16228%
+Accuracy: 71.15801%
+Accuracy: 71.15385%
+Accuracy: 71.25527%
+Accuracy: 71.35417%
+Accuracy: 71.55350%
+Accuracy: 71.34146%
+Accuracy: 71.18474%
+Accuracy: 71.27976%
+Accuracy: 71.27451%
+Accuracy: 71.22093%
+Accuracy: 71.21648%
+Accuracy: 71.02273%
+Accuracy: 70.83333%
+Accuracy: 70.97222%
+Accuracy: 70.83333%
+Accuracy: 70.78804%
+Accuracy: 70.69892%
+Accuracy: 70.61170%
+Accuracy: 70.65789%
+Accuracy: 70.48611%
+Accuracy: 70.57560%
+Accuracy: 70.45068%
+Accuracy: 70.66498%
+Accuracy: 70.79167%
+Accuracy: 70.66832%
+Accuracy: 70.62908%
+Accuracy: 70.63107%
+Accuracy: 70.59295%
+Accuracy: 70.47619%
+Accuracy: 70.40094%
+Accuracy: 70.44393%
+Accuracy: 70.44753%
+Accuracy: 70.52752%
+Accuracy: 70.56818%
+Accuracy: 70.64565%
+Accuracy: 70.61012%
+Accuracy: 70.83333%
+Accuracy: 70.86988%
+Accuracy: 70.76087%
+Accuracy: 70.72557%
+Accuracy: 70.83333%
+Accuracy: 70.86864%
+Accuracy: 71.00840%
+Accuracy: 70.97222%
+Accuracy: 70.93664%
+Accuracy: 70.96995%
+Accuracy: 70.86721%
+Accuracy: 71.00134%
+Accuracy: 71.10000%
+Accuracy: 71.06481%
+Accuracy: 71.12861%
+Accuracy: 71.22396%
+Accuracy: 71.22093%
+Accuracy: 71.31410%
+Accuracy: 71.18321%
+Accuracy: 71.21212%
+Accuracy: 71.11529%
+Accuracy: 71.11318%
+Accuracy: 71.17284%
+Accuracy: 71.04779%
+Accuracy: 71.13747%
+Accuracy: 71.19565%
+Accuracy: 71.19305%
+Accuracy: 71.25000%
+Accuracy: 71.21749%
+Accuracy: 71.24413%
+Accuracy: 71.29953%
+Accuracy: 71.26736%
+Accuracy: 71.26437%
+Accuracy: 71.17580%
+Accuracy: 71.11678%
+Accuracy: 71.11486%
+Accuracy: 71.22483%
+Accuracy: 71.27778%
+Accuracy: 71.19205%
+Accuracy: 71.13487%
+Accuracy: 71.13290%
+Accuracy: 71.21212%
+Accuracy: 71.18280%
+Accuracy: 71.20726%
+Accuracy: 71.17834%
+Accuracy: 71.14979%
+Accuracy: 71.06918%
+Accuracy: 71.14583%
+Accuracy: 71.19565%
+Accuracy: 71.14198%
+Accuracy: 71.06339%
+Accuracy: 70.98577%
+Accuracy: 71.03535%
+Accuracy: 71.05924%
+Accuracy: 71.08283%
+Accuracy: 71.05655%
+Accuracy: 70.93195%
+Accuracy: 70.95588%
+Accuracy: 71.02827%
+Accuracy: 71.05136%
+Accuracy: 71.09827%
+Accuracy: 71.07280%
+Accuracy: 71.07143%
+Accuracy: 71.18845%
+Accuracy: 71.11582%
+Accuracy: 71.09082%
+Accuracy: 70.94972%
+Accuracy: 71.01852%
+Accuracy: 71.10958%
+Accuracy: 71.13095%
+Accuracy: 71.10656%
+Accuracy: 71.10507%
+Accuracy: 71.12613%
+Accuracy: 71.14695%
+Accuracy: 71.18984%
+Accuracy: 71.16578%
+Accuracy: 71.09788%
+Accuracy: 71.07456%
+Accuracy: 71.13874%
+Accuracy: 71.15885%
+Accuracy: 71.07081%
+Accuracy: 71.11254%
+Accuracy: 71.08974%
+Accuracy: 71.10969%
+Accuracy: 71.06599%
+Accuracy: 71.02273%
+Accuracy: 71.10553%
+Accuracy: 71.12500%
+Accuracy: 71.12355%
+Accuracy: 71.01898%
+Accuracy: 70.97701%
+Accuracy: 70.99673%
+Accuracy: 71.05691%
+Accuracy: 71.01537%
+Accuracy: 71.01449%
+Accuracy: 71.01362%
+Accuracy: 70.99282%
+Accuracy: 70.97222%
+Accuracy: 71.03081%
+Accuracy: 70.91195%
+Accuracy: 70.87246%
+Accuracy: 70.87227%
+Accuracy: 70.91085%
+Accuracy: 70.89120%
+Accuracy: 70.96774%
+Accuracy: 70.96713%
+Accuracy: 71.00457%
+Accuracy: 70.92803%
+Accuracy: 70.96531%
+Accuracy: 71.00225%
+Accuracy: 71.00149%
+Accuracy: 71.05655%
+Accuracy: 71.07407%
+Accuracy: 71.10988%
+Accuracy: 71.14537%
+Accuracy: 71.08918%
+Accuracy: 70.97889%
+Accuracy: 70.96014%
+Accuracy: 70.94156%
+Accuracy: 71.01293%
+Accuracy: 71.04793%
+Accuracy: 71.02920%
+Accuracy: 71.04610%
+Accuracy: 71.00989%
+Accuracy: 71.02672%
+Accuracy: 71.02591%
+Accuracy: 71.04254%
+Accuracy: 71.04167%
+Accuracy: 71.07538%
+Accuracy: 71.09160%
+Accuracy: 71.07339%
+Accuracy: 71.14071%
+Accuracy: 71.12245%
+Accuracy: 71.03659%
+Accuracy: 71.05263%
+Accuracy: 71.03495%
+Accuracy: 71.05087%
+Accuracy: 71.03333%
+Accuracy: 70.99934%
+Accuracy: 71.01521%
+Accuracy: 70.98155%
+Accuracy: 70.96457%
+Accuracy: 70.94771%
+Accuracy: 70.96354%
+Accuracy: 70.94682%
+Accuracy: 70.96253%
+Accuracy: 70.97812%
+Accuracy: 70.92949%
+Accuracy: 70.92912%
+Accuracy: 70.91285%
+Accuracy: 70.83333%
+Accuracy: 70.80177%
+Accuracy: 70.80189%
+Accuracy: 70.78634%
+Accuracy: 70.83333%
+Accuracy: 70.81779%
+Accuracy: 70.77138%
+Accuracy: 70.75617%
+Accuracy: 70.74108%
+Accuracy: 70.75674%
+Accuracy: 70.75702%
+Accuracy: 70.80292%
+Accuracy: 70.83333%
+Accuracy: 70.80314%
+Accuracy: 70.72804%
+Accuracy: 70.71343%
+Accuracy: 70.72879%
+Accuracy: 70.66964%
+Accuracy: 70.65540%
+Accuracy: 70.62648%
+Accuracy: 70.64193%
+Accuracy: 70.59859%
+Accuracy: 70.58480%
+Accuracy: 70.54196%
+Accuracy: 70.52846%
+Accuracy: 70.55845%
+Accuracy: 70.57382%
+Accuracy: 70.57471%
+Accuracy: 70.56128%
+Accuracy: 70.57648%
+Accuracy: 70.57736%
+Accuracy: 70.57823%
+Accuracy: 70.53672%
+Accuracy: 70.53773%
+Accuracy: 70.53872%
+Accuracy: 70.49776%
+Accuracy: 70.49889%
+Accuracy: 70.51389%
+Accuracy: 70.47342%
+Accuracy: 70.54360%
+Accuracy: 70.55831%
+Accuracy: 70.47697%
+Accuracy: 70.51913%
+Accuracy: 70.52015%
+Accuracy: 70.56189%
+Accuracy: 70.49513%
+Accuracy: 70.46926%
+Accuracy: 70.43011%
+Accuracy: 70.45820%
+Accuracy: 70.43269%
+Accuracy: 70.46060%
+Accuracy: 70.43524%
+Accuracy: 70.44974%
+Accuracy: 70.38502%
+Accuracy: 70.38644%
+Accuracy: 70.34853%
+Accuracy: 70.36311%
+Accuracy: 70.36458%
+Accuracy: 70.36604%
+Accuracy: 70.32867%
+Accuracy: 70.26574%
+Accuracy: 70.30607%
+Accuracy: 70.29487%
+Accuracy: 70.30930%
+Accuracy: 70.37462%
+Accuracy: 70.36331%
+Accuracy: 70.42806%
+Accuracy: 70.44192%
+Accuracy: 70.46828%
+Accuracy: 70.45683%
+Accuracy: 70.49550%
+Accuracy: 70.48403%
+Accuracy: 70.49751%
+Accuracy: 70.44891%
+Accuracy: 70.45005%
+Accuracy: 70.46351%
+Accuracy: 70.41544%
+Accuracy: 70.40441%
+Accuracy: 70.44233%
+Accuracy: 70.46784%
+Accuracy: 70.43246%
+Accuracy: 70.43362%
+Accuracy: 70.41063%
+Accuracy: 70.42389%
+Accuracy: 70.43708%
+Accuracy: 70.41427%
+Accuracy: 70.37966%
+Accuracy: 70.36905%
+Accuracy: 70.35850%
+Accuracy: 70.38352%
+Accuracy: 70.39660%
+Accuracy: 70.39783%
+Accuracy: 70.44601%
+Accuracy: 70.42369%
+Accuracy: 70.41317%
+Accuracy: 70.36778%
+Accuracy: 70.39229%
+Accuracy: 70.37037%
+Accuracy: 70.37165%
+Accuracy: 70.33840%
+Accuracy: 70.32828%
+Accuracy: 70.37546%
+Accuracy: 70.35388%
+Accuracy: 70.35519%
+Accuracy: 70.37920%
+Accuracy: 70.40308%
+Accuracy: 70.41554%
+Accuracy: 70.42793%
+Accuracy: 70.40656%
+Accuracy: 70.39651%
+Accuracy: 70.36416%
+Accuracy: 70.35428%
+Accuracy: 70.36667%
+Accuracy: 70.40115%
+Accuracy: 70.39125%
+Accuracy: 70.40344%
+Accuracy: 70.40457%
+Accuracy: 70.38377%
+Accuracy: 70.35214%
+Accuracy: 70.40794%
+Accuracy: 70.41993%
+Accuracy: 70.42101%
+Accuracy: 70.43290%
+Accuracy: 70.44473%
+Accuracy: 70.45650%
+Accuracy: 70.46821%
+Accuracy: 70.46915%
+Accuracy: 70.45940%
+Accuracy: 70.44970%
+Accuracy: 70.39753%
+Accuracy: 70.39864%
+Accuracy: 70.42090%
+Accuracy: 70.40084%
+Accuracy: 70.39141%
+Accuracy: 70.38203%
+Accuracy: 70.36223%
+Accuracy: 70.38429%
+Accuracy: 70.38542%
+Accuracy: 70.41771%
+Accuracy: 70.42910%
+Accuracy: 70.45008%
+[[548   2   5   4  12  24   1   2   1   1   0  34  10   2   7   4   3   7  1   0]
+ [ 22 228  17   0   0  22   5   4   1   6   3  58  11  17   2  13   1   4  2   0]
+ [  8   8 374   1   0  70   4   7   5   3   2   5   5   6   6  34   1   2 17   0]
+ [  6   5   6 153   3   5   1   7  17   1   0   5   1   2   5  12   0   4  9   0]
+ [ 27   0   0   0 257  42   0   9   6   1   0  16   6   1   1   0   0  22  1   0]
+ [ 18   9   9   1  12 479   3  51  21   3   2  12  11   4   7   9   5  46  3   0]
+ [  0   7   7   0   0  16 456   1   2   2   1  10  12  33  25   1   0   2  0   0]
+ [  5   6  13   1   1  35   0 392   4   2  10   7   2   0   0   2   3   3  3   0]
+ [ 10   1   5   6   3  42   0  18 205   1   2   4   0   5   0   2   1  10  1   0]
+ [ 17  25   0   0   2  22   4  16   0 308  19   2  43  11   8   2   4   4  0   0]
+ [ 11  61   8   1   1  10   2  21   1   4 192   0  14   0   4   3   2   1  0   0]
+ [ 18   6   3   0   7  27   5   4  15   6   3 903  10   6  31   8   2  16  1   0]
+ [ 20  18   0   0  11  25   3   5   6  27   3  29 510  14  44   2   3   9  0   0]
+ [ 19  84  13   0   3   7   6  12   4  74   4  21  21 334  10  14   1   9  3   0]
+ [ 20   3   1   1   9  13   4   6   0   5   0  34  53  12 755   1  11   3  0   0]
+ [  4  13  10   0   4   9   0   3   4   2   1   3   1   1   1 194   1   3 25   0]
+ [  3   4   0   0   2  19   4   9   0   0   1   9   0   0   7   2 256   4  0   0]
+ [  9   2   0   1  16  31   1   0  14   1   0   5   4   1   2   5   1 203  0   0]
+ [  0  12  19   1   1   5   3   4   1   1   0   1   5   4   2  71   0   6 62   0]
+ [  0   1   0   0   2   0   0   0   0   0  18   0   0   0   0   0   0   0  0   0]]

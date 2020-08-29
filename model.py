@@ -1,26 +1,24 @@
-raise DeprecationWarning
-
 import tensorflow as tf
 
 from tensorflow.keras.layers import *
 from tensorflow.keras.models import *
 
 import env
-from modules.encoders import *
+from modules.transformer import *
 
-N_LAYERS = 2
+N_LAYERS = 4
 N_HEADS = 4
 DFF = 128
 D_MODEL = 256
 
 
 def get_model(n_classes=10, return_attentions=False):
-    encoder = Encoder(N_LAYERS, D_MODEL, N_HEADS, DFF, env.MAX_TIME_STEP)
-    pos_encoding = positional_encoding(env.MAX_TIME_STEP, D_MODEL)  # +1 for <CLS> token
+    encoder = Encoder(N_LAYERS, D_MODEL, N_HEADS, DFF, env.TIME_STEP)
+    pos_encoding = positional_encoding(env.TIME_STEP, D_MODEL)  # +1 for <CLS> token
     pos_encoding = tf.concat([tf.zeros_like(pos_encoding[:, 0:1, ...]), pos_encoding], axis=1)
     inp = Input(shape=(None, 128))
     x = inp
-    cls_token = tf.ones_like(x[:, 0:1, ...]) * env.CLS_VAL
+    cls_token = tf.ones_like(x[:, 0:1, ...]) * env.CLS_VAL  
     x = tf.concat([cls_token, x], axis=1)
     padding_mask = create_padding_mask(x)
     x = TimeDistributed(Dense(units=D_MODEL))(x)

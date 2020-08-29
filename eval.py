@@ -32,7 +32,7 @@ for x, y in ds:
         trues_global.append(real)
         preds_global.append(pred)
 print(f"Total   Accuracy: {(correct / total) * 100:.5f}%")
-class_avg_acc = np.mean([ (x[i] / np.sum(x)) if np.sum(x) > 0. else 0. for i, x in enumerate(confusion_matrix)])
+class_avg_acc = np.mean([ x[i] / np.sum(x) for i, x in enumerate(confusion_matrix)])
 print(f"Average Accuracy: {class_avg_acc*100:.5f}%")
 print(confusion_matrix)
 

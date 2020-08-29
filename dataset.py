@@ -11,7 +11,7 @@ import env
 AUTOTUNE = tf.data.experimental.AUTOTUNE
 
 
-def get_dataset(file_dict, batch_size=env.TRAIN.BATCH_SIZE, repeat=True):
+def get_dataset(file_dict, batch_size=env.BATCH_SIZE, repeat=True):
     def npy_load_wrapper(item):
         # print(item)
         data = np.load(item.numpy().decode())
@@ -51,7 +51,7 @@ def get_dataset(file_dict, batch_size=env.TRAIN.BATCH_SIZE, repeat=True):
     ds = ds.padded_batch(
         batch_size,
         padded_shapes=(
-            tf.TensorShape([env.DATASET.MAX_TIME_STEP, env.MODEL.D_INPUT]),
+            tf.TensorShape([env.TIME_STEP, 128]),
             tf.TensorShape([]),
             # tf.TensorShape([len(env.classes.keys())])
         ),
@@ -67,14 +67,14 @@ def get_dataset(file_dict, batch_size=env.TRAIN.BATCH_SIZE, repeat=True):
 if __name__ == '__main__':
     split_val = (input("split val set? [y/N]: ").lower() == "y")
     split_test = (input("split val set? [y/N]: ").lower() == "y")
-    ds_dir = input(f"Dataset dir? [\"{env.DATASET.DIR}\"]: ") or env.DATASET.DIR
+    ds_dir = input("Dataset dir? [\"./dataset\"]: ") or "./dataset"
     dataset_train = {}
     dataset_val = {}
     dataset_test = {}
     for dir_name in tqdm(glob.glob(f"{ds_dir}/*/")):
         class_name = os.path.basename(dir_name[:-1])
         ll = sorted(glob.glob(f"{dir_name}/*.npy"),
-                    key=lambda y: int(os.path.basename(y).split('.')[0].replace("XC", "")))[::-1]
+                    key=lambda y: int(os.path.basename(y).split('.')[0]))[::-1]
 
         # [VAL, ... TEST, ...., TRAIN]
         val_slice_idx = len(ll) // 10 if split_val else 0

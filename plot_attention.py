@@ -13,7 +13,7 @@ test_data_path = os.environ['test_data'] if 'test_data' in os.environ else \
 
 for path in test_data_path.split(":"):
     data_0 = np.load(path)[np.newaxis, ...]
-    data = np.ones([1, env.MAX_TIME_STEP, 128]) * env.PADDING_VAL
+    data = np.ones([1, env.TIME_STEP, 128]) * env.PADDING_VAL
     data[:, :data_0.shape[1], :] = data_0
     _, attentions, pad = m.predict(data)
 

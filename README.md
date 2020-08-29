@@ -1,4 +1,3 @@
-TODO
 # tweet-net
 ## Pre-process
 ### Overview
@@ -50,14 +49,4 @@ python3 train.py
         ```bash
         conda install ffmpeg
         ```
-## Tips
-### Batch Job Submit
-```bash
-for i in 2 4 8;
-do
-    for j in 4 8;
-    do
-        sbatch ffn_${j}_${i}_job.sh;
-    done;
-done 
-```
+
