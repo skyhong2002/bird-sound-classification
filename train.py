@@ -47,13 +47,13 @@ def main():
                         write_graph=False),
             EarlyStopping(monitor='val_loss',
                           min_delta=0,
-                          patience=8,
+                          patience=1000,
                           verbose=1),
             checkpoint,
             ReduceLROnPlateau(monitor='val_loss', factor=0.2,
                               patience=3, min_lr=1e-5, verbose=1)
         ],
-        epochs=100
+        epochs=10000
     )
 
 

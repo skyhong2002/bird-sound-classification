@@ -59,8 +59,8 @@ def job(parm):
         #     return
         class_name = class_name.replace(" ", "_").replace("'", '-')
         for i, sub_arr in enumerate(np.array_split(arr, np.ceil(arr.shape[0] / TIME_STEP))):
-            if sub_arr.shape[0] < MIN_TIME_STEP and i != 0:
-                continue
+            if sub_arr.shape[0] < MIN_TIME_STEP:
+                logging.info(f"{sub_arr.shape[0]} is too short.")
             os.system(f"mkdir -p {OUTPUT_DIR}/{class_name}/")
             np.save(f"{OUTPUT_DIR}/{class_name}/{os.path.basename(filename)}_{i}.npy", sub_arr)
     except Exception as e:
@@ -72,7 +72,7 @@ def main():
     process_queue = []
     for dir_name in glob.glob(f"{AUDIO_DIR}/*/"):
         class_name = os.path.basename(dir_name[:-1])
-        for filename in glob.glob(f"{dir_name}/*.mp3"):
+        for filename in glob.glob(f"{dir_name}/*.wav"):
             process_queue.append((class_name, filename))
     chunk_size = CHUNK_SIZE if CHUNK_SIZE > 0 else len(process_queue)
     start = 0

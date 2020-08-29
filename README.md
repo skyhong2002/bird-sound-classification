@@ -61,7 +61,3 @@ do
     done;
 done 
 ```
-### Challenge
-```bash
-CUDA_VISIBLE_DEVICES=1 TF_CPP_MIN_LOG_LEVEL=3 N_THREAD=32  WORK_DIR=../../lifeCLEF/test_set/ CONF_FILE=configs/lifeCLEF/conv-4-2.yaml python3 challenge.py
-```

@@ -51,7 +51,7 @@ def get_dataset(file_dict, batch_size=env.TRAIN.BATCH_SIZE, repeat=True):
     ds = ds.padded_batch(
         batch_size,
         padded_shapes=(
-            tf.TensorShape([env.DATASET.MAX_TIME_STEP, 128]),
+            tf.TensorShape([env.DATASET.MAX_TIME_STEP, env.MODEL.D_INPUT]),
             tf.TensorShape([]),
             # tf.TensorShape([len(env.classes.keys())])
         ),
