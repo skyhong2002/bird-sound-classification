@@ -1,0 +1,17 @@
+dataset:
+    feature: "spectrogram"
+    dir: "./dataset_spectrogram-150-640"
+    max_time_step: 640
+    min_time_step: 150
+
+train:
+    batch_size: 32
+
+model:
+    layer_type: Conv1D
+    d_input: 128
+    n_layers: 4
+    n_heads: 4
+    d_model: 256
+    d_ff: 128
+
